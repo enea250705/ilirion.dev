@@ -1,0 +1,490 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbars for all elements while maintaining scroll functionality */
+* {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none !important;  /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Ensure specific elements also have scrollbars hidden */
+html, body, div, section, main, article, aside, nav, header, footer {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* Force overflow settings */
+.overflow-auto,
+.overflow-scroll,
+.overflow-x-auto,
+.overflow-y-auto,
+.overflow-x-scroll,
+.overflow-y-scroll {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@layer base {
+  /* Global responsive typography */
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold;
+  }
+  
+  h3 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+  
+  h4 {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl font-semibold;
+  }
+  
+  p {
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
+  }
+  
+  /* Global responsive spacing */
+  section {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+  
+  /* Global responsive containers */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Global responsive grids */
+  .grid-responsive-1 {
+    @apply grid grid-cols-1;
+  }
+  
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 sm:grid-cols-2;
+  }
+  
+  .grid-responsive-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  .grid-responsive-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  
+  /* Global responsive gaps */
+  .gap-responsive {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  /* Global responsive padding */
+  .p-responsive {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  .px-responsive {
+    @apply px-4 sm:px-6 md:px-8;
+  }
+  
+  .py-responsive {
+    @apply py-4 sm:py-6 md:py-8;
+  }
+  
+  /* Global responsive margins */
+  .m-responsive {
+    @apply m-4 sm:m-6 md:m-8;
+  }
+  
+  .mb-responsive {
+    @apply mb-8 sm:mb-12 md:mb-16;
+  }
+  
+  /* Global responsive buttons */
+  .btn-responsive {
+    @apply px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg min-h-[44px] sm:min-h-[48px];
+  }
+  
+  /* Global responsive text sizes */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+  
+  /* Mobile-optimized input elements */
+  input, textarea, select {
+    @apply min-h-[44px];
+  }
+  
+  /* Mobile-optimized touch targets */
+  button, a[role="button"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000000;
+  /* iOS Safari specific fixes */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* Ensure proper scrolling: vertical yes, horizontal no */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure all containers respect mobile viewport */
+* {
+  box-sizing: border-box;
+}
+
+/* Force everything to stay within viewport */
+*, *::before, *::after {
+  max-width: 100vw;
+}
+
+/* Specific container fixes */
+.max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #000000 0%, #404040 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
+  to { box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); }
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Mobile-specific styles and optimizations */
+@media (max-width: 768px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container, section, div, main, article, aside, header, footer {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  /* Ensure grid items don't cause overflow */
+  .grid {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  /* Prevent absolute positioned elements from causing overflow */
+  .absolute {
+    max-width: 100vw;
+    left: auto;
+    right: auto;
+  }
+  
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+  
+  /* Additional mobile-specific overrides */
+  .container {
+    @apply px-4;
+  }
+  
+  /* Ensure proper touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile-specific animations - reduce motion for performance */
+  .floating-animation {
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Improve readability on small screens */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Mobile form optimizations */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: 8px;
+  }
+  
+  /* Mobile-specific hover states (disabled on touch devices) */
+  .card-hover:hover {
+    transform: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Force mobile to respect bounds */
+  * {
+    max-width: 100vw !important;
+  }
+  
+  /* Prevent any horizontal overflow */
+  .container, section, div, main, article, aside, header, footer {
+    overflow-x: hidden;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  /* Further optimize for very small screens */
+  h1 {
+    @apply text-xl;
+  }
+  
+  h2 {
+    @apply text-lg;
+  }
+  
+  h3 {
+    @apply text-base;
+  }
+  
+  section {
+    @apply py-8;
+  }
+  
+  .container {
+    @apply px-3;
+  }
+  
+  /* Reduce margins and padding for cramped spaces */
+  .mb-responsive {
+    @apply mb-6;
+  }
+  
+  .p-responsive {
+    @apply p-3;
+  }
+}
+
+/* Tablet landscape optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Optimize for tablet landscape */
+  .grid-responsive-3 {
+    @apply grid-cols-2;
+  }
+  
+  .grid-responsive-4 {
+    @apply grid-cols-3;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for retina displays */
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .floating-animation,
+  .pulse-glow {
+    animation: none;
+  }
+  
+  .card-hover {
+    transition: none;
+  }
+}
+
+/* Dark mode support (for future use) */
+@media (prefers-color-scheme: dark) {
+  /* Ready for dark mode implementation */
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+@media print {
+  .floating-animation,
+  .pulse-glow,
+  .card-hover {
+    animation: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* AGGRESSIVE HORIZONTAL SCROLL ELIMINATION */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+* {
+  max-width: 100vw !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Force all containers to respect viewport */
+.max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl, .max-w-xl {
+  max-width: calc(100vw - 2rem) !important;
+  width: 100% !important;
+}
+
+/* Prevent any element from extending beyond viewport */
+section, div, main, article, aside, header, footer, nav {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Grid and flex containers */
+.grid, .flex {
+  overflow-x: hidden !important;
+  min-width: 0 !important;
+}
+
+/* Navigation dropdown fix */
+.absolute {
+  max-width: calc(100vw - 2rem) !important;
+}
+
+/* Mobile aggressive fixes */
+@media (max-width: 768px) {
+  * {
+    max-width: 100vw !important;
+  }
+  
+  .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    max-width: 100vw !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
