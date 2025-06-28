@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { 
   Home, 
   HumanoidRobot, 
@@ -25,14 +26,16 @@ import {
   PrivacyPolicy,
   TermsOfService,
   CookiePolicy,
-  Presale
+  Presale,
+  IlirionIDE
 } from './pages';
 
 function App() {
   return (
     <Router>
-    <div className="min-h-screen bg-white">
-      <Navigation />
+      <ScrollToTop />
+      <div className="min-h-screen bg-white">
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/humanoid-robot" element={<HumanoidRobot />} />
@@ -57,9 +60,10 @@ function App() {
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/cookies" element={<CookiePolicy />} />
           <Route path="/presale" element={<Presale />} />
+          <Route path="/ide" element={<IlirionIDE />} />
         </Routes>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
     </Router>
   );
 }

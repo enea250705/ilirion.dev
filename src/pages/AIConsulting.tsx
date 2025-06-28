@@ -138,7 +138,7 @@ const AIConsulting: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Core Services</h2>
-            <p className="text-xl text-black max-w-3xl mx-auto">Strategic planning, technical expertise, and business insight ,  all in one partnership.</p>
+            <p className="text-xl text-black max-w-3xl mx-auto">Strategic planning, technical expertise, and business insight, all in one partnership.</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {coreServices.map((svc, i) => (

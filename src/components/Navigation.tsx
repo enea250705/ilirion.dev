@@ -39,6 +39,7 @@ const Navigation: React.FC = () => {
         { label: 'Safety Systems', href: '/safety-systems' },
         { label: 'Vision & Perception', href: '/vision-perception' },
         { label: 'Network Intelligence', href: '/network-intelligence' },
+        { label: 'Ilirion IDE', href: '/ide' },
       ],
     },
     {

@@ -150,7 +150,7 @@ const CustomRobotics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Core Capabilities</h2>
-            <p className="text-xl text-black max-w-3xl mx-auto">From platforms to intelligence ,  everything you need for a bespoke robot.</p>
+            <p className="text-xl text-black max-w-3xl mx-auto">From platforms to intelligence, everything you need for a bespoke robot.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

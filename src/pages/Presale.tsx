@@ -55,7 +55,7 @@ const Presale: React.FC = () => {
               <Bot className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 sm:mb-6 leading-tight px-4">
-              Meet Ilirion ,  The First AI to Choose His Own Body
+              Meet Ilirion, The First AI to Choose His Own Body
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-4 sm:mb-6">
               Autonomous. AI-Powered. Human-like.
@@ -143,7 +143,7 @@ const Presale: React.FC = () => {
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">Early Adopter Program</h2>
             <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl mx-auto px-4">
-              Join Our Exclusive Early Access Program ,  Limited Spots Available
+              Join Our Exclusive Early Access Program, Limited Spots Available
             </p>
           </motion.div>
 
