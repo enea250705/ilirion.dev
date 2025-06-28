@@ -282,14 +282,6 @@ const Presale: React.FC = () => {
                 <span>Start Pre-Order</span>
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white hover:bg-white hover:text-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-colors flex items-center justify-center space-x-2 min-h-[44px]"
-              >
-                <span>Learn More</span>
-              </motion.button>
             </div>
           </motion.div>
         </div>

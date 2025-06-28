@@ -110,7 +110,7 @@ const Solutions: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-3 sm:mb-4">{solution.title}</h3>
-                  <p className="text-sm sm:text-base md:text-lg text-black mb-4 sm:mb-6 leading-relaxed">{solution.description}</p>
+                  <p className="text-gray-600 mt-2 flex-grow">{solution.description}</p>
                   
                   {/* Key Benefits */}
                   <div className="mb-4 sm:mb-6">
@@ -139,15 +139,6 @@ const Solutions: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-black hover:bg-gray-800 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold transition-colors flex items-center space-x-2 text-sm sm:text-base min-h-[44px]"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </motion.button>
                 </div>
                 
                 {/* Image - Hidden on mobile */}

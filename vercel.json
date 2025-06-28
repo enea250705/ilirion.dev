@@ -8,5 +8,16 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "version": 2,
+  "routes": [
+    {
+      "src": "/download",
+      "dest": "/IlirionIDE.exe",
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Disposition": "attachment; filename=IlirionIDE.exe"
+      }
+    }
+  ]
 } 

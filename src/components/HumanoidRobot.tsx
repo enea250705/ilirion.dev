@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const HumanoidRobot: React.FC = () => {
   const capabilities = [
@@ -53,10 +54,10 @@ const HumanoidRobot: React.FC = () => {
               ))}
             </div>
 
-            <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
-              <span>Learn More</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            <div className="mt-8 text-center">
+              <h3 className="text-xl font-bold text-gray-900">Advanced AI Core</h3>
+              <p className="mt-2 text-gray-600">Powered by a custom neural network for true learning.</p>
+            </div>
           </div>
 
           <div className="relative hidden md:block">

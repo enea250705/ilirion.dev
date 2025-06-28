@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, ArrowRight, Zap, Brain, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ilirionRobot from '../assets/ilirion1.png';
 
 // Custom hook for counter animation
@@ -61,24 +61,6 @@ const Hero: React.FC = () => {
     { value: '15', label: 'Integrated AI Systems' },
     { value: '100ms', label: 'Real-time Processing Cycles' },
     { value: '10Hz', label: 'Autonomous Decision Making' },
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Consciousness Engine',
-      description: 'Real-time awareness with 100ms processing cycles'
-    },
-    {
-      icon: Zap,
-      title: 'Advanced Memory System',
-      description: 'Persistent learning with 25,000+ memory nodes'
-    },
-    {
-      icon: Shield,
-      title: 'Safety-First Design',
-      description: 'Multi-layered ethical and physical safety systems'
-    }
   ];
 
   return (
@@ -168,97 +150,11 @@ const Hero: React.FC = () => {
                   className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                
-                {/* Floating Video Overlay */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 }}
-                  className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-lg"
-                >
-                  <div className="flex items-center space-x-1 sm:space-x-2">
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs sm:text-sm font-medium text-black">Live Demo</span>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Floating Feature Cards - Hidden on mobile and tablet, visible on large desktop only */}
-              <div className="hidden xl:block">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 1.5 + index * 0.2 }}
-                  className={`absolute ${
-                    index === 0 ? 'left-0 top-16' :
-                    index === 1 ? 'right-0 top-1/2' :
-                    'left-0 bottom-16'
-                  } bg-white rounded-xl p-4 shadow-xl border border-gray-100 max-w-xs`}
-                  style={{
-                    transform: index === 0 ? 'translateX(-50%)' :
-                             index === 1 ? 'translateX(50%)' :
-                             'translateX(-50%)'
-                  }}
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="bg-black p-2 rounded-xl flex-shrink-0">
-                      <feature.icon className="h-5 w-5 text-white" />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="font-bold text-black text-base leading-tight">{feature.title}</h4>
-                      <p className="text-black text-sm leading-tight mt-1">{feature.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-              </div>
-
-              {/* Mobile Feature Summary - Only on mobile/tablet */}
-              <div className="md:hidden mt-6">
-                <div className="grid grid-cols-1 gap-3">
-                  {features.map((feature, index) => (
-                    <motion.div
-                      key={feature.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 1.5 + index * 0.1 }}
-                      className="bg-white rounded-xl p-4 shadow-lg border border-gray-100"
-                    >
-                      <div className="flex items-start space-x-3">
-                        <div className="bg-black p-2 rounded-lg flex-shrink-0">
-                          <feature.icon className="h-4 w-4 text-white" />
-                        </div>
-                        <div className="min-w-0">
-                          <h4 className="font-bold text-black text-sm leading-tight">{feature.title}</h4>
-                          <p className="text-black text-xs leading-tight mt-1">{feature.description}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-black rounded-full mt-2"
-          ></motion.div>
-        </div>
-      </motion.div>
     </section>
   );
 };

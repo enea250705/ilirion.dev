@@ -114,7 +114,7 @@ const IlirionIDE: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Download Ilirion IDE</h2>
             <div className="inline-block">
               <a
-                href="/downloads/IlirionIDE.exe"
+                href="https://ilirion-ide-download.vercel.app/download"
                 className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
                 <Download className="w-5 h-5 mr-2" />
